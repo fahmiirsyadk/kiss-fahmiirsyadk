@@ -1,5 +1,5 @@
---- a/Makefile
-+++ b/Makefile
+--- Makefile
++++ Makefile
 @@ -21,7 +21,6 @@
  
  SHLD = ${CC} ${CFLAGS}
