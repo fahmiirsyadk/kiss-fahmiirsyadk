@@ -1,0 +1,12 @@
+#!/bin/sh -e
+
+patch -p < rpath.patch
+
+make
+
+install -d usr/lib "$1/usr/include"
+install -m 644 src/dictionary.h "$1/usr/include/dictionary.h"
+install -m 644 src/iniparser.h "$1/usr/include/iniparser.h"
+install -m 755 libiniparser.so.1 "$1/usr/lib/libiniparser.so.1"
+
+ln -s libiniparser.so.1 "$1/usr/lib/libiniparser.so"
