@@ -1,0 +1,7 @@
+fftw        make
+libtool     make
+automake    make
+ncurses     make
+m4          make
+iniparser
+alsa-utils
