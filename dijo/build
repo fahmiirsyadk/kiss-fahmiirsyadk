@@ -1,3 +1,5 @@
-cargo install --force
+#!/bin/sh -e
+
+cargo install --release
 
 install -Dm755 target/release/dijo "$1/usr/bin/dijo"
