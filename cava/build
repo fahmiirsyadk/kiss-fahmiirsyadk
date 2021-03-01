@@ -1,6 +1,5 @@
 #!/bin/sh -e
 
-default_prepare
 autoreconf -fi
 
 ./configure \
