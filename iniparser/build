@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
-patch -p < rpath.patch
+patch -p0 < rpath.patch
 
 make
 
