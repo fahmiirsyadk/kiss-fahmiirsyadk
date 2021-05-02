@@ -1,5 +1,9 @@
 #!/bin/sh -e
 
+# Disable warning as CFLAGS must work this way.
+# shellcheck disable=2086
+"${CC:-cc}" $CFLAGS ...
+
 make cold CONFIGURE_ARGS="--prefix=/usr --disable-werror"
 
 make cold-install
