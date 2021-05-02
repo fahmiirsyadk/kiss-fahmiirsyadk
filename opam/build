@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
-make cold CONFIGURE_ARGS="--prefix=/usr"
+make cold CONFIGURE_ARGS="--prefix=/usr --disable-werror"
 
 make cold-install
 make DESTDIR="$1" install
