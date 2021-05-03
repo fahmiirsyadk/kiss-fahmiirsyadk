@@ -1,14 +1,9 @@
 #!/bin/sh -e
 
-./configure \
-	--prefix=/usr \
-	--sysconfdir=/etc \
-	--mandir=/usr/share/man \
-	--infodir=/usr/share/info \
-	--localstatedir=/var
+./configure
 
-make -j1 lib-ext
-make -j1 all
+make lib-ext
+make 
 make DESTDIR="$1" install
 
-install -Dm644 LICENSE "$1"/usr/share/lisences/opam/LICENSE"
+install -Dm644 LICENSE -t "$1/usr/share/lisences/opam"
