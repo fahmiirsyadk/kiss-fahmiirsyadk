@@ -1,12 +1,8 @@
 #!/bin/sh -e
 
-# Disable warning as CFLAGS must work this way.
-# shellcheck disable=2086
+patch -p0 < opam.patch
 
-export AS="cc -c"
-export ASPP="cc -c"
-
-make cold CONFIGURE_ARGS="--prefix=/usr --disable-werror"
+make cold CONFIGURE_ARGS="--prefix=/usr"
 
 make cold-install
 make DESTDIR="$1" install
