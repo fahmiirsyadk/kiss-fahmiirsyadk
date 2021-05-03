@@ -1,6 +1,8 @@
 #!/bin/sh -e
 
-patch -p0 < opam.patch
+for patch in *.patch; do
+    patch -p1 < "$patch"
+done
 
 make cold CONFIGURE_ARGS="--prefix=/usr"
 
